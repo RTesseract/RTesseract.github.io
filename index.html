@@ -60,29 +60,48 @@
 </head>
 <body>
     <header>
-        <h1>Ziheng Su</h1>
+        <h1>Ziheng (Aaron) Su</h1>
         <p>Computer Science Undergraduate | Aspiring Researcher</p>
     </header>
 
     <section>
         <h2>About Me</h2>
-        <p>I am a senior undergraduate student at the University of Rochester pursuing a Bachelor of Science in Computer Science. My interests lie in systems, programming languages, and concurrent computing, with a strong focus on research and academic contributions.</p>
+        <p>I am a senior undergraduate student at the University of Rochester pursuing a Bachelor of Science in Computer Science. My interests lie in systems: parallel and distributed computing, programming languages, and compilers.</p>
 
         <h2>Research</h2>
-        <p><strong>Integration of Hardware Transactional Memory and Persistent Memory</strong> - Collaborated with Professor Michael Scott to explore the combination of hardware transactional memory and non-volatile memory.</p>
-        <p><strong>Improving U-Net for MRI Image Segmentation</strong> - Investigated architectural modifications to enhance deep learning models for glioma MRI analysis.</p>
-
-        <h2>Projects</h2>
         <ul>
-            <li><strong>Persistent-memory Calculator:</strong> Modified GNU bc to support persistent storage using non-volatile memory.</li>
-            <li><strong>Relational Databases:</strong> Implemented SQL-like operations and memory management in C.</li>
-            <li><strong>Minimax Reversi:</strong> Designed an object-oriented Reversi game with advanced modularity.</li>
+            <li><p><strong>Reconciling HTM and NVM Programming with Buffered Durability [WIP]</strong><br>
+            <i>Supervisors: Prof. Michael Scott, Ph.D. candidate Mingzhe Du</i><br>
+            Adopted and internalized a concurrent vEB (Van Emde Boas) tree using Hardware Transactional Memory (HTM) for synchronization.
+            Enhanced the code to provide persistence across program runs and crashes, maintaining the correctness requirements of buffered durable linearizability.
+            Based persistence on the Montage library, which forces updates flush to persistent memory on a periodic basis.
+            For up to 20 threads, the performance of the persistent vEB tree using HTM is 9 times that of using a global lock.  (Beyond that point, hardware transactions frequently abort, due to cross-thread sharing.)</p></li>
+            <li><p><strong>Persistent-memory calculator (GNU <i>bc</i>) project [WIP]</strong><br>
+            <i>Supervisor: Dr. Terence Kelly</i><br>
+            Forked and modified an existing GNU/Linux calculator utility called bc.
+            Redirected user-defined data structures in bc from the volatile to non-volatile memory and enabled access to data structures in future invocations without any data loss, leading to less code in the scenario of incremental data update.
+            Successfully developed a prototype and performed extensive testing. Updated in response to changes in maintainers' demands. Currently negotiating with maintainers for merging into new bc releases.
+            Solidifies experiences debugging with GDB.</p></li>
+            <li><p><strong>Improving U-Net Performance for Low-Grade Glioma MRI Image Segmentation by Modification of U-Net Concatenations [<a href="https://doi.org/10.1117/12.3021666">link</a>]</strong><br>
+            <i>Supervisor: Prof. Manolis Kellis</i><br>
+            Investigated research trends in applications of deep learning in medical imaging.
+            Brainstormed possible contributions to the existing literature. The current idea of modifying the U-Net model architecture is accepted by the professor.
+            Deployed TensorFlow in the project code base. Become more familiar with TensorFlow syntax and third-party platforms such as Colab and TensorBoard.
+            Data analysis: produced readable results in the form of concise bar charts, scatter plots, and Excel spreadsheets.</p></li>
+        </ul>
+
+        <h2>Teaching</h2>
+        <ul>
+            <li><strong>Spring 2025 (Teaching Assistant):</strong> CSC 254 - Programming Language Design & Implementation</li>
+            <li><strong>Fall 2023 (Workshop Leader):</strong> CSC 172 - Data Structures & Algorithms</li>
         </ul>
 
         <h2>Contact</h2>
         <p class="contact-info">
-            Email: <a href="mailto:zihengsu@example.com">zihengsu@example.com</a><br>
-            LinkedIn: <a href="https://www.linkedin.com/in/zihengsu2003/" target="_blank">linkedin.com/in/zihengsu2003</a>
+            Personal Email: <a href="mailto:aaronsu2003@gmail.com">aaronsu2003@gmail.com</a><br>
+            School Email: <a href="mailto:zsu8@u.rochester.edu">zsu8@u.rochester.edu</a><br>
+            LinkedIn: <a href="https://www.linkedin.com/in/zihengsu2003/" target="_blank">linkedin.com/in/zihengsu2003</a><br>
+            Phone: <a href="tel:+1-585-748-4571">(585) 748-4571</a><br>
         </p>
     </section>
 
